@@ -3,7 +3,6 @@ body {
   text-align: center;
 }
 
-
 header {
   background-color: #672455;
   color: white;
@@ -15,9 +14,8 @@ h1 {
   font-size: 5em;
   font-family: 'Raleway', sans-serif;
 }
-img {
+#down-arrow {
   padding-top: 20em;
-  border-radius: 15em;
 }
 
 main h2 {
@@ -33,15 +31,19 @@ p {
 main {
   background: whitesmoke;
 }
+
+/******* ABOUT STYLES *******/
+
+#about-bio {
+  width: 20em;
+}
+
 #container {
   display: flex;
   justify-content: center;
   padding-top: 10em;
 }
 
-#about-bio {
-  width: 20em;
-}
 #about-profile, #about-bio {
   padding-right: 2em;
   padding-left: 2em;
@@ -54,7 +56,11 @@ main {
 }
 #profile {
   padding: 3em;
+  border-radius: 15em;
 }
+
+/******* QUIZ STYLES *******/
+
 #about-me-quiz {
   height: 100vh;
 }
