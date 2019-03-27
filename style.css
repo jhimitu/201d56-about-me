@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #672455;
+  color: white;
+  height: 100vh;
+}
+h1 {
+  margin: 0;
+  padding-top: 3em;
+  font-size: 5em;
+  font-family: 'Raleway', sans-serif;
+}
+img {
+  padding-top: 20em;
+  border-radius: 15em;
+}
+
+main h2 {
+  color: #4a5158;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3em;
+  
+}
+main {
+  background: whitesmoke;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10em;
+}
+
+#about-bio {
+  width: 20em;
+  color: #4a5158;
+}
+#about-profile, #about-bio {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+#about-me {
+  height: 100vh;
+}
+#short-bio {
+  padding-top: 1em;
+}
+#profile {
+  padding: 3em;
+}
+#about-me-quiz {
+  height: 100vh;
+}
+#guessing-game {
+  padding-top: 5em;
+}
+
+#start-quiz {
+  background: #672455;
+  color: #fff;
+  padding: 1em 2em;
+  font-size: 1em;
+  border-radius: .5em;
+  border-color: #672455;
+  box-shadow: 2px, 4px, 10px grey;
+}
