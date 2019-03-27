@@ -10,20 +10,35 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Hi, I'm Jhia!</h1>
+      <h1>👋 I'm Jhia!</h1>
+      <!-- <p>Welcome to my website!</p> -->
+      <img src="down-arrow.png" alt="scroll-down" height="50px" width="50px">
     </header>
     <main>
-      <p>Welcome to my website!</p>
-      <h2>About Me</h2>
-      <p>I am a Seattle-based Software Engineer, originally from Denver, CO (Go Broncos!). My background is Mechanical Engineering and Environmental Science, and in high school I studied Architecture for four years under a licensed Architect. However, I've always had an interest in technology.</p>
-      <p>I was always drawn to making websites on CMS platforms and the softwares used in Engineering and Architecture (SketchUp, AutoCad, SolidWorks) were always fun to learn. After an accumulation of exposure to tech, in 2017 I took a dive and started learning to code. I've been coding ever since, and always learning new things. You'll probably see a lot of the new things I'm learning on display here. Have fun looking around!</p>
-      <a href="https://github.com/jhimitu">Github</a>
-      <h2>Let's Play A Game</h2>
-      <p>Take this quiz and see if you can guess some fun facts about me!</p>
-      <button id="start-quiz">Take Quiz</button>
+      <section id="about-me">
+        <div id="container">
+          <div id="about-profile">
+            <img id="profile" src="me.jpg" alt="jhia" height="400" width="400">
+          </div>
+          <div id="about-bio">
+            <h2 id="short-bio">About Me</h2>
+            <p>I am a Seattle-based Software Engineer, originally from Denver, CO. My background is Mechanical Engineering and Environmental Science. However, I've always had an interest in technology.</p>
+            <p>In 2017 I took a dive and started learning to code. I've been coding ever since, and always learning new things. You'll probably see a lot of the new things I'm learning on display here. Have fun looking around!</p>
+            <a href="https://github.com/jhimitu">Github</a>
+          </div>
+        </div>
+      </section>
+      <section id="about-me-quiz">
+        <h2 id="guessing-game">Let's Play A Game</h2>
+        <p>Take this quiz and see if you can guess some fun facts about me!</p>
+        <button id="start-quiz">Take Quiz</button>
+        <p id="output"></p>
+      </section>
     </main>
     <footer>
       <p>
