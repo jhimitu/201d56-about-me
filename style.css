@@ -3,6 +3,7 @@ body {
   text-align: center;
 }
 
+
 header {
   background-color: #672455;
   color: white;
@@ -25,6 +26,10 @@ main h2 {
   font-size: 3em;
   
 }
+p {
+  color: #4a5158;
+  font-family: 'Raleway', sans-serif;
+}
 main {
   background: whitesmoke;
 }
@@ -36,7 +41,6 @@ main {
 
 #about-bio {
   width: 20em;
-  color: #4a5158;
 }
 #about-profile, #about-bio {
   padding-right: 2em;
