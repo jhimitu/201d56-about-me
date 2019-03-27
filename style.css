@@ -58,6 +58,11 @@ main {
   padding: 3em;
   border-radius: 15em;
 }
+#github-link {
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  color: #4a5158;
+}
 
 /******* QUIZ STYLES *******/
 
