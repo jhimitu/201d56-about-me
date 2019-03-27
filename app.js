@@ -3,6 +3,8 @@
 // let prompts = ['Am I a morning person?', 'Do I like orange soda?', 'Do I love cheesy dance movies?', 'Am I taller than 5\'3\"?', 'Do I play an instrument?'];
 
 document.getElementById('start-quiz').addEventListener('click', () => {
+  let userName = prompt('Before we start, I need to know who you are. What is your name?');
+  alert(`Nice to meet you ${userName}!`);
   let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
   if (morningPersonAnswer === 'yes') {
     alert('Yes! That\'s correct! My brain works much better in the morning.');
