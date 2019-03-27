@@ -82,3 +82,17 @@ main {
   border-color: #672455;
   box-shadow: 2px 4px 10px grey;
 }
+
+/************ MEDIA QUERIES *************/
+
+@media screen and (max-width: 992px) {
+  #container {
+    flex-wrap: wrap;
+  }
+  #short-bio {
+    padding-top: 0;
+  }
+  #profile {
+    padding-top:  3em;
+  }
+}
