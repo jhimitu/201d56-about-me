@@ -109,76 +109,103 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   // }
   // askQuestionFive();
 
-  // <------------------------- QUESTION 6 -------------------------> //
-  function askQuestionSix() {
-    let min = Math.ceil(1);
-    let max = Math.floor(10);
-    let randomNumber = Math.floor(Math.random() * (max - min)) + min;
-    console.log(randomNumber);
-    let guesses = 0;
-    let guessesLeft = 4;
-    let guessNumberAnswer = 0;
-    while (guessNumberAnswer !== randomNumber && guesses < guessesLeft) {
-      guessNumberAnswer = prompt(
-        `I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft -
-          guesses} guesses left.`
-      );
-      console.log(`guessed the number: ${guessNumberAnswer}`);
-      console.log(guessNumberAnswer === randomNumber && guesses < 4);
-      console.log(typeof guessNumberAnswer);
-      guesses++;
-      if (guessNumberAnswer > randomNumber) {
-        alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
-      }
-      if (guessNumberAnswer < randomNumber) {
-        alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
-      }
+  // // <------------------------- QUESTION 6 -------------------------> //
+  // function askQuestionSix() {
+  //   let min = Math.ceil(1);
+  //   let max = Math.floor(10);
+  //   let randomNumber = Math.floor(Math.random() * (max - min)) + min;
+  //   console.log(randomNumber);
+  //   let guesses = 0;
+  //   let guessesLeft = 4;
+  //   let guessNumberAnswer = 0;
+  //   while (guessNumberAnswer !== randomNumber && guesses < guessesLeft) {
+  //     guessNumberAnswer = prompt(
+  //       `I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft -
+  //         guesses} guesses left.`
+  //     );
+  //     console.log(`guessed the number: ${guessNumberAnswer}`);
+  //     console.log(guessNumberAnswer === randomNumber && guesses < 4);
+  //     console.log(typeof guessNumberAnswer);
+  //     guesses++;
+  //     if (guessNumberAnswer > randomNumber) {
+  //       alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
+  //     }
+  //     if (guessNumberAnswer < randomNumber) {
+  //       alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
+  //     }
+  //     if (
+  //       parseInt(guessNumberAnswer) === randomNumber &&
+  //       guessesLeft >= guesses
+  //     ) {
+  //       numberOfCorrectAnswers++;
+  //       alert(
+  //         `You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //       );
+  //       break;
+  //     }
+  //     if (
+  //       parseInt(guessNumberAnswer) !== randomNumber &&
+  //       guessesLeft === guesses
+  //     ) {
+  //       alert(
+  //         `Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //       );
+  //     }
+  //   }
+  // }
+  // askQuestionSix();
+
+  // <------------------------- QUESTION 7 -------------------------> //
+  function askQuestionSeven() {
+    const states = ['colorado', 'north carolina'];
+    let stateLivedInAnswer = '';
+    const availableGuesses = 6;
+    let triesUsed = 0;
+    while (
+      (stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) &&
+      triesUsed < availableGuesses
+    ) {
+      stateLivedInAnswer = prompt(
+        `Can you guess what states I have lived in besides Washington? You have ${availableGuesses -
+          triesUsed} guesses left.`
+      ).toLowerCase();
+      triesUsed++;
       if (
-        parseInt(guessNumberAnswer) === randomNumber &&
-        guessesLeft >= guesses
+        (stateLivedInAnswer === states[0] ||
+          stateLivedInAnswer === states[1]) &&
+        triesUsed < 6
       ) {
         numberOfCorrectAnswers++;
         alert(
-          `You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+          `Correct! I have lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
         );
         break;
       }
       if (
-        parseInt(guessNumberAnswer) !== randomNumber &&
-        guessesLeft === guesses
+        (stateLivedInAnswer !== states[0] ||
+          stateLivedInAnswer !== states[1]) &&
+        triesUsed === availableGuesses
       ) {
         alert(
-          `Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+          `Sorry. None of those are correct and you're out of guesses. I've lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
         );
       }
+      console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
     }
   }
-  askQuestionSix();
+  askQuestionSeven();
 
-  //   // <------------------------- QUESTION 7 -------------------------> //
-
-  //   const states = ['colorado', 'north carolina'];
-  //   let stateLivedInAnswer = '';
-  //   const availableGuesses = 6;
-  //   let triesUsed = 0;
-  //   while ((stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) && triesUsed < availableGuesses) {
-  //     stateLivedInAnswer = prompt(`Can you guess what states I have lived in besides Washington? You have ${availableGuesses - triesUsed} guesses left.`).toLowerCase();
-  //     triesUsed++;
-  //     if ((stateLivedInAnswer === states[0] || stateLivedInAnswer === states[1]) && triesUsed < 6) {
-  //       numberOfCorrectAnswers++;
-  //       alert(`Correct! I have lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //       break;
-  //     }
-  //     if ((stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) && triesUsed === availableGuesses) {
-  //       alert(`Sorry. None of those are correct and you're out of guesses. I've lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //     }
-  //     console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
-  //   }
-  //   if (numberOfCorrectAnswers < 3) {
-  //     alert(`You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Better luck next time!`);
-  //   } else if (numberOfCorrectAnswers > 3 && numberOfCorrectAnswers <= 5) {
-  //     alert(`You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Not bad.`);
-  //   } else if (numberOfCorrectAnswers > 5) {
-  //     alert(`High Score! You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}!`);
-  //   }
+  // if (numberOfCorrectAnswers < 3) {
+  //   alert(
+  //     `You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Better luck next time!`
+  //   );
+  // } else if (numberOfCorrectAnswers > 3 && numberOfCorrectAnswers <= 5) {
+  //   alert(
+  //     `You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Not bad.`
+  //   );
+  // } else if (numberOfCorrectAnswers > 5) {
+  //   alert(
+  //     `High Score! You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}!`
+  //   );
+  // }
 });
