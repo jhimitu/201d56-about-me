@@ -14,89 +14,100 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   };
   userName();
 
-  // <------------------------- QUESTION 1 -------------------------> //
-  function askQuestionOne() {
-    let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
-    if (morningPersonAnswer === 'yes' || morningPersonAnswer === 'y') {
-      numberOfCorrectAnswers++;
-      alert(
-        `Yes! That\'s correct! My brain works much better in the morning. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    } else if (morningPersonAnswer === 'no' || morningPersonAnswer === 'n') {
-      alert(
-        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    }
-    console.log(`Question 1: Answer: ${morningPersonAnswer}`);
-  }
-  askQuestionOne();
+  // // <------------------------- QUESTION 1 -------------------------> //
+  // function askQuestionOne() {
+  //   let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
+  //   if (morningPersonAnswer === 'yes' || morningPersonAnswer === 'y') {
+  //     numberOfCorrectAnswers++;
+  //     alert(
+  //       `Yes! That\'s correct! My brain works much better in the morning. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   } else if (morningPersonAnswer === 'no' || morningPersonAnswer === 'n') {
+  //     alert(
+  //       `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   }
+  //   console.log(`Question 1: Answer: ${morningPersonAnswer}`);
+  // }
+  // askQuestionOne();
 
-  // <------------------------- QUESTION 2 -------------------------> //
-  function askQuestionTwo() {
-    let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
-    if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
-      numberOfCorrectAnswers++;
-      alert(
-        `Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
-      alert(
-        `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    }
-    console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
-  }
-  askQuestionTwo();
+  // // <------------------------- QUESTION 2 -------------------------> //
+  // function askQuestionTwo() {
+  //   let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
+  //   if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
+  //     numberOfCorrectAnswers++;
+  //     alert(
+  //       `Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
+  //     alert(
+  //       `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   }
+  //   console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
+  // }
+  // askQuestionTwo();
 
-  // <------------------------- QUESTION 3 -------------------------> //
-  function askQuestionThree() {
-    let cheesyDanceMovieAnswer = prompt(
-      'Do I love cheesy dance movies?'
+  // // <------------------------- QUESTION 3 -------------------------> //
+  // function askQuestionThree() {
+  //   let cheesyDanceMovieAnswer = prompt(
+  //     'Do I love cheesy dance movies?'
+  //   ).toLowerCase();
+  //   if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
+  //     numberOfCorrectAnswers++;
+  //     alert(
+  //       `You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   } else if (
+  //     cheesyDanceMovieAnswer === 'no' ||
+  //     cheesyDanceMovieAnswer === 'n'
+  //   ) {
+  //     alert(
+  //       `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   }
+  //   console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
+  // }
+  // askQuestionThree();
+
+  // //   // <------------------------- QUESTION 4 -------------------------> //
+  // function askQuestionFour() {
+  //   let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
+  //   if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
+  //     numberOfCorrectAnswers++;
+  //     alert(
+  //       `You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
+  //     alert(
+  //       `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   }
+  //   console.log(`Question 4: Answer: ${tallerThanAnswer}`);
+  // }
+  // askQuestionFour();
+
+  // <------------------------- QUESTION 5 -------------------------> //
+  function askQuestionFive() {
+    let playsInstrumentAnswer = prompt(
+      'Do I play an instrument?'
     ).toLowerCase();
-    if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
+    if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
       numberOfCorrectAnswers++;
       alert(
-        `You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+        `Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
       );
     } else if (
-      cheesyDanceMovieAnswer === 'no' ||
-      cheesyDanceMovieAnswer === 'n'
+      playsInstrumentAnswer === 'no' ||
+      playsInstrumentAnswer === 'n'
     ) {
       alert(
         `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
       );
     }
-    console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
+    console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
   }
-  askQuestionThree();
-
-  //   // <------------------------- QUESTION 4 -------------------------> //
-  function askQuestionFour() {
-    let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
-    if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
-      numberOfCorrectAnswers++;
-      alert(
-        `You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
-      alert(
-        `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    }
-    console.log(`Question 4: Answer: ${tallerThanAnswer}`);
-  }
-  askQuestionFour();
-
-  //   // <------------------------- QUESTION 5 -------------------------> //
-
-  //   let playsInstrumentAnswer = prompt('Do I play an instrument?').toLowerCase();
-  //   if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
-  //     numberOfCorrectAnswers++;
-  //     alert(`Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   } else if (playsInstrumentAnswer === 'no' || playsInstrumentAnswer === 'n') {
-  //     alert(`Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   }
-  //   console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
+  askQuestionFive();
 
   //   // <------------------------- QUESTION 6 -------------------------> //
 
