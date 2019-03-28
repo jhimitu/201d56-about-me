@@ -11,149 +11,152 @@ document.getElementById('start-quiz').addEventListener('click', () => {
       'Before we start, I need to know who you are. What is your name?'
     );
     alert(`Nice to meet you ${input}!`);
+    return input;
   };
-  userName();
+  let guestName = userName();
+  console.log(userName);
+  console.log(guestName);
 
-  // // <------------------------- QUESTION 1 -------------------------> //
-  // function askQuestionOne() {
-  //   let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
-  //   if (morningPersonAnswer === 'yes' || morningPersonAnswer === 'y') {
-  //     numberOfCorrectAnswers++;
-  //     alert(
-  //       `Yes! That\'s correct! My brain works much better in the morning. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   } else if (morningPersonAnswer === 'no' || morningPersonAnswer === 'n') {
-  //     alert(
-  //       `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   }
-  //   console.log(`Question 1: Answer: ${morningPersonAnswer}`);
-  // }
-  // askQuestionOne();
+  // <------------------------- QUESTION 1 -------------------------> //
+  function askQuestionOne() {
+    let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
+    if (morningPersonAnswer === 'yes' || morningPersonAnswer === 'y') {
+      numberOfCorrectAnswers++;
+      alert(
+        `Yes! That\'s correct! My brain works much better in the morning. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (morningPersonAnswer === 'no' || morningPersonAnswer === 'n') {
+      alert(
+        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 1: Answer: ${morningPersonAnswer}`);
+  }
+  askQuestionOne();
 
-  // // <------------------------- QUESTION 2 -------------------------> //
-  // function askQuestionTwo() {
-  //   let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
-  //   if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
-  //     numberOfCorrectAnswers++;
-  //     alert(
-  //       `Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
-  //     alert(
-  //       `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   }
-  //   console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
-  // }
-  // askQuestionTwo();
+  // <------------------------- QUESTION 2 -------------------------> //
+  function askQuestionTwo() {
+    let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
+    if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
+      numberOfCorrectAnswers++;
+      alert(
+        `Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
+      alert(
+        `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
+  }
+  askQuestionTwo();
 
-  // // <------------------------- QUESTION 3 -------------------------> //
-  // function askQuestionThree() {
-  //   let cheesyDanceMovieAnswer = prompt(
-  //     'Do I love cheesy dance movies?'
-  //   ).toLowerCase();
-  //   if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
-  //     numberOfCorrectAnswers++;
-  //     alert(
-  //       `You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   } else if (
-  //     cheesyDanceMovieAnswer === 'no' ||
-  //     cheesyDanceMovieAnswer === 'n'
-  //   ) {
-  //     alert(
-  //       `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   }
-  //   console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
-  // }
-  // askQuestionThree();
+  // <------------------------- QUESTION 3 -------------------------> //
+  function askQuestionThree() {
+    let cheesyDanceMovieAnswer = prompt(
+      'Do I love cheesy dance movies?'
+    ).toLowerCase();
+    if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
+      numberOfCorrectAnswers++;
+      alert(
+        `You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (
+      cheesyDanceMovieAnswer === 'no' ||
+      cheesyDanceMovieAnswer === 'n'
+    ) {
+      alert(
+        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
+  }
+  askQuestionThree();
 
-  // //   // <------------------------- QUESTION 4 -------------------------> //
-  // function askQuestionFour() {
-  //   let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
-  //   if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
-  //     numberOfCorrectAnswers++;
-  //     alert(
-  //       `You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
-  //     alert(
-  //       `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   }
-  //   console.log(`Question 4: Answer: ${tallerThanAnswer}`);
-  // }
-  // askQuestionFour();
+  //   // <------------------------- QUESTION 4 -------------------------> //
+  function askQuestionFour() {
+    let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
+    if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
+      numberOfCorrectAnswers++;
+      alert(
+        `You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
+      alert(
+        `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 4: Answer: ${tallerThanAnswer}`);
+  }
+  askQuestionFour();
 
-  // // <------------------------- QUESTION 5 -------------------------> //
-  // function askQuestionFive() {
-  //   let playsInstrumentAnswer = prompt(
-  //     'Do I play an instrument?'
-  //   ).toLowerCase();
-  //   if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
-  //     numberOfCorrectAnswers++;
-  //     alert(
-  //       `Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   } else if (
-  //     playsInstrumentAnswer === 'no' ||
-  //     playsInstrumentAnswer === 'n'
-  //   ) {
-  //     alert(
-  //       `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //     );
-  //   }
-  //   console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
-  // }
-  // askQuestionFive();
+  // <------------------------- QUESTION 5 -------------------------> //
+  function askQuestionFive() {
+    let playsInstrumentAnswer = prompt(
+      'Do I play an instrument?'
+    ).toLowerCase();
+    if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
+      numberOfCorrectAnswers++;
+      alert(
+        `Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (
+      playsInstrumentAnswer === 'no' ||
+      playsInstrumentAnswer === 'n'
+    ) {
+      alert(
+        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
+  }
+  askQuestionFive();
 
-  // // <------------------------- QUESTION 6 -------------------------> //
-  // function askQuestionSix() {
-  //   let min = Math.ceil(1);
-  //   let max = Math.floor(10);
-  //   let randomNumber = Math.floor(Math.random() * (max - min)) + min;
-  //   console.log(randomNumber);
-  //   let guesses = 0;
-  //   let guessesLeft = 4;
-  //   let guessNumberAnswer = 0;
-  //   while (guessNumberAnswer !== randomNumber && guesses < guessesLeft) {
-  //     guessNumberAnswer = prompt(
-  //       `I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft -
-  //         guesses} guesses left.`
-  //     );
-  //     console.log(`guessed the number: ${guessNumberAnswer}`);
-  //     console.log(guessNumberAnswer === randomNumber && guesses < 4);
-  //     console.log(typeof guessNumberAnswer);
-  //     guesses++;
-  //     if (guessNumberAnswer > randomNumber) {
-  //       alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
-  //     }
-  //     if (guessNumberAnswer < randomNumber) {
-  //       alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
-  //     }
-  //     if (
-  //       parseInt(guessNumberAnswer) === randomNumber &&
-  //       guessesLeft >= guesses
-  //     ) {
-  //       numberOfCorrectAnswers++;
-  //       alert(
-  //         `You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //       );
-  //       break;
-  //     }
-  //     if (
-  //       parseInt(guessNumberAnswer) !== randomNumber &&
-  //       guessesLeft === guesses
-  //     ) {
-  //       alert(
-  //         `Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-  //       );
-  //     }
-  //   }
-  // }
-  // askQuestionSix();
+  // <------------------------- QUESTION 6 -------------------------> //
+  function askQuestionSix() {
+    let min = Math.ceil(1);
+    let max = Math.floor(10);
+    let randomNumber = Math.floor(Math.random() * (max - min)) + min;
+    console.log(randomNumber);
+    let guesses = 0;
+    let guessesLeft = 4;
+    let guessNumberAnswer = 0;
+    while (guessNumberAnswer !== randomNumber && guesses < guessesLeft) {
+      guessNumberAnswer = prompt(
+        `I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft -
+          guesses} guesses left.`
+      );
+      console.log(`guessed the number: ${guessNumberAnswer}`);
+      console.log(guessNumberAnswer === randomNumber && guesses < 4);
+      console.log(typeof guessNumberAnswer);
+      guesses++;
+      if (guessNumberAnswer > randomNumber) {
+        alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
+      }
+      if (guessNumberAnswer < randomNumber) {
+        alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
+      }
+      if (
+        parseInt(guessNumberAnswer) === randomNumber &&
+        guessesLeft >= guesses
+      ) {
+        numberOfCorrectAnswers++;
+        alert(
+          `You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+        );
+        break;
+      }
+      if (
+        parseInt(guessNumberAnswer) !== randomNumber &&
+        guessesLeft === guesses
+      ) {
+        alert(
+          `Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+        );
+      }
+    }
+  }
+  askQuestionSix();
 
   // <------------------------- QUESTION 7 -------------------------> //
   function askQuestionSeven() {
@@ -195,17 +198,20 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   }
   askQuestionSeven();
 
-  // if (numberOfCorrectAnswers < 3) {
-  //   alert(
-  //     `You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Better luck next time!`
-  //   );
-  // } else if (numberOfCorrectAnswers > 3 && numberOfCorrectAnswers <= 5) {
-  //   alert(
-  //     `You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Not bad.`
-  //   );
-  // } else if (numberOfCorrectAnswers > 5) {
-  //   alert(
-  //     `High Score! You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}!`
-  //   );
-  // }
+  function giveSummary() {
+    if (numberOfCorrectAnswers < 3) {
+      alert(
+        `You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${guestName}. Better luck next time!`
+      );
+    } else if (numberOfCorrectAnswers > 3 && numberOfCorrectAnswers <= 5) {
+      alert(
+        `You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${guestName}. Not bad.`
+      );
+    } else if (numberOfCorrectAnswers > 5) {
+      alert(
+        `High Score! You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${guestName}!`
+      );
+    }
+  }
+  giveSummary();
 });
