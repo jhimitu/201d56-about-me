@@ -89,19 +89,23 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
   }
 
-//   // <------------------------- QUESTION 7 -------------------------> //
+  // <------------------------- QUESTION 7 -------------------------> //
 
-//   const states = ['colorado', 'north carolina'];
-//   let stateLivedInAnswer = '';
-//   const availableGuesses = 6;
-//   let triesUsed = 0;
-//   while ((stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) && triesUsed < availableGuesses) {
-//     stateLivedInAnswer = prompt(`Can you guess what states I have lived in besides Washington? You have ${availableGuesses - triesUsed} guesses left.`).toLowerCase();
-//     triesUsed++;
-//     if ((stateLivedInAnswer === states[0] || stateLivedInAnswer === states[1]) && triesUsed < 6) {
-//       alert('Correct! I have lived in North Carolina and Colorado.');
-//       break;
-//     }
-//     console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
-//   }
+  const states = ['colorado', 'north carolina'];
+  let stateLivedInAnswer = '';
+  const availableGuesses = 6;
+  let triesUsed = 0;
+  while ((stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) && triesUsed < availableGuesses) {
+    stateLivedInAnswer = prompt(`Can you guess what states I have lived in besides Washington? You have ${availableGuesses - triesUsed} guesses left.`).toLowerCase();
+    triesUsed++;
+    if ((stateLivedInAnswer === states[0] || stateLivedInAnswer === states[1]) && triesUsed < 6) {
+      numberOfCorrectAnswers++;
+      alert(`Correct! I have lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+      break;
+    }
+    if ((stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) && triesUsed === availableGuesses) {
+      alert(`Sorry. None of those are correct and you're out of guesses. I've lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`)
+    }
+    console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
+  }
 });
