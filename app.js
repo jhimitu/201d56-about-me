@@ -42,25 +42,27 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   }
   console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
 
-//   // <------------------------- QUESTION 4 -------------------------> //
+  // <------------------------- QUESTION 4 -------------------------> //
 
-//   let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
-//   if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
-//     alert('You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT.');
-//   } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
-//     alert('Sorry, you guessed wrong.');
-//   }
-//   console.log(`Question 4: Answer: ${tallerThanAnswer}`);
+  let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
+  if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
+    numberOfCorrectAnswers++;
+    alert(`You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
+    alert(`Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  }
+  console.log(`Question 4: Answer: ${tallerThanAnswer}`);
 
-//   // <------------------------- QUESTION 5 -------------------------> //
+  // <------------------------- QUESTION 5 -------------------------> //
 
-//   let playsInstrumentAnswer = prompt('Do I play an instrument?').toLowerCase();
-//   if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
-//     alert('Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away.');
-//   } else if (playsInstrumentAnswer === 'no' || playsInstrumentAnswer === 'n') {
-//     alert('Sorry, that\'s incorrect.');
-//   }
-//   console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
+  let playsInstrumentAnswer = prompt('Do I play an instrument?').toLowerCase();
+  if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
+    numberOfCorrectAnswers++;
+    alert(`Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  } else if (playsInstrumentAnswer === 'no' || playsInstrumentAnswer === 'n') {
+    alert(`Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  }
+  console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
 
 // // <------------------------- QUESTION 6 -------------------------> //
   
