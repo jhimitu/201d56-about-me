@@ -14,16 +14,22 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   };
   userName();
 
-  //   // <------------------------- QUESTION 1 -------------------------> //
-
-  //   let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
-  //   if (morningPersonAnswer === 'yes' || morningPersonAnswer === 'y') {
-  //     numberOfCorrectAnswers++;
-  //     alert(`Yes! That\'s correct! My brain works much better in the morning. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   } else if (morningPersonAnswer === 'no' || morningPersonAnswer === 'n') {
-  //     alert(`Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   }
-  //   console.log(`Question 1: Answer: ${morningPersonAnswer}`);
+  // <------------------------- QUESTION 1 -------------------------> //
+  function askQuestionOne() {
+    let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
+    if (morningPersonAnswer === 'yes' || morningPersonAnswer === 'y') {
+      numberOfCorrectAnswers++;
+      alert(
+        `Yes! That\'s correct! My brain works much better in the morning. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (morningPersonAnswer === 'no' || morningPersonAnswer === 'n') {
+      alert(
+        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 1: Answer: ${morningPersonAnswer}`);
+  }
+  askQuestionOne();
 
   //   // <------------------------- QUESTION 2 -------------------------> //
 
