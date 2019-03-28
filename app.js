@@ -87,58 +87,73 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   // }
   // askQuestionFour();
 
-  // <------------------------- QUESTION 5 -------------------------> //
-  function askQuestionFive() {
-    let playsInstrumentAnswer = prompt(
-      'Do I play an instrument?'
-    ).toLowerCase();
-    if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
-      numberOfCorrectAnswers++;
-      alert(
-        `Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    } else if (
-      playsInstrumentAnswer === 'no' ||
-      playsInstrumentAnswer === 'n'
-    ) {
-      alert(
-        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
-      );
-    }
-    console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
-  }
-  askQuestionFive();
-
-  //   // <------------------------- QUESTION 6 -------------------------> //
-
-  //   let min = Math.ceil(1);
-  //   let max = Math.floor(10);
-  //   let randomNumber = Math.floor(Math.random() * (max - min)) + min;
-  //   console.log(randomNumber);
-  //   let guesses = 0;
-  //   let guessesLeft = 4;
-  //   let guessNumberAnswer = 0;
-  //   while ((guessNumberAnswer !== randomNumber) && guesses < guessesLeft) {
-  //     guessNumberAnswer = prompt(`I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft - guesses} guesses left.`);
-  //     console.log(`guessed the number: ${guessNumberAnswer}`);
-  //     console.log((guessNumberAnswer === randomNumber) && guesses < 4);
-  //     console.log(typeof guessNumberAnswer);
-  //     guesses++;
-  //     if (guessNumberAnswer > randomNumber) {
-  //       alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
-  //     }
-  //     if (guessNumberAnswer < randomNumber) {
-  //       alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
-  //     }
-  //     if ((parseInt(guessNumberAnswer) === randomNumber) && guessesLeft >= guesses) {
-  //       numberOfCorrectAnswers++;
-  //       alert(`You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //       break;
-  //     }
-  //     if ((parseInt(guessNumberAnswer) !== randomNumber) && guessesLeft === guesses){
-  //       alert(`Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //     }
+  // // <------------------------- QUESTION 5 -------------------------> //
+  // function askQuestionFive() {
+  //   let playsInstrumentAnswer = prompt(
+  //     'Do I play an instrument?'
+  //   ).toLowerCase();
+  //   if (playsInstrumentAnswer === 'yes' || playsInstrumentAnswer === 'y') {
+  //     numberOfCorrectAnswers++;
+  //     alert(
+  //       `Yep! I play guitar, and I also sing. Fun fact: at one point I was part of my family band. Until I moved away. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
+  //   } else if (
+  //     playsInstrumentAnswer === 'no' ||
+  //     playsInstrumentAnswer === 'n'
+  //   ) {
+  //     alert(
+  //       `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+  //     );
   //   }
+  //   console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
+  // }
+  // askQuestionFive();
+
+  // <------------------------- QUESTION 6 -------------------------> //
+  function askQuestionSix() {
+    let min = Math.ceil(1);
+    let max = Math.floor(10);
+    let randomNumber = Math.floor(Math.random() * (max - min)) + min;
+    console.log(randomNumber);
+    let guesses = 0;
+    let guessesLeft = 4;
+    let guessNumberAnswer = 0;
+    while (guessNumberAnswer !== randomNumber && guesses < guessesLeft) {
+      guessNumberAnswer = prompt(
+        `I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft -
+          guesses} guesses left.`
+      );
+      console.log(`guessed the number: ${guessNumberAnswer}`);
+      console.log(guessNumberAnswer === randomNumber && guesses < 4);
+      console.log(typeof guessNumberAnswer);
+      guesses++;
+      if (guessNumberAnswer > randomNumber) {
+        alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
+      }
+      if (guessNumberAnswer < randomNumber) {
+        alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
+      }
+      if (
+        parseInt(guessNumberAnswer) === randomNumber &&
+        guessesLeft >= guesses
+      ) {
+        numberOfCorrectAnswers++;
+        alert(
+          `You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+        );
+        break;
+      }
+      if (
+        parseInt(guessNumberAnswer) !== randomNumber &&
+        guessesLeft === guesses
+      ) {
+        alert(
+          `Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+        );
+      }
+    }
+  }
+  askQuestionSix();
 
   //   // <------------------------- QUESTION 7 -------------------------> //
 
