@@ -31,17 +31,22 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   }
   askQuestionOne();
 
-  //   // <------------------------- QUESTION 2 -------------------------> //
-
-  //   let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
-  //   if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
-  //     numberOfCorrectAnswers++;
-  //     alert(`Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
-  //     alert(`Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   }
-  //   console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
-
+  // <------------------------- QUESTION 2 -------------------------> //
+  function askQuestionTwo() {
+    let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
+    if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
+      numberOfCorrectAnswers++;
+      alert(
+        `Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
+      alert(
+        `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
+  }
+  askQuestionTwo();
   //   // <------------------------- QUESTION 3 -------------------------> //
 
   //   let cheesyDanceMovieAnswer = prompt('Do I love cheesy dance movies?').toLowerCase();
