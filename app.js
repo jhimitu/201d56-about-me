@@ -64,26 +64,30 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   }
   console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
 
-// // <------------------------- QUESTION 6 -------------------------> //
+// <------------------------- QUESTION 6 -------------------------> //
   
-//   let min = Math.ceil(1);
-//   let max = Math.floor(10);
-//   let randomNumber = Math.floor(Math.random() * (max - min)) + min;
-//   console.log(randomNumber);
-//   let guesses = 0;
-//   let guessesLeft = 4;
-//   let guessNumberAnswer = 0;
-//   while ((guessNumberAnswer !== randomNumber) && guesses < guessesLeft) {
-//     guessNumberAnswer = prompt(`I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft - guesses} guesses left.`);
-//     console.log(`guessed the number: ${guessNumberAnswer}`);
-//     console.log((guessNumberAnswer === randomNumber) && guesses < 4);
-//     console.log(typeof guessNumberAnswer);
-//     guesses++;
-//     if ((parseInt(guessNumberAnswer) === randomNumber) && guessesLeft >= guesses) {
-//       alert(`You guessed it! I am thinking of the number ${randomNumber}`);
-//       break;
-//     }
-//   }
+  let min = Math.ceil(1);
+  let max = Math.floor(10);
+  let randomNumber = Math.floor(Math.random() * (max - min)) + min;
+  console.log(randomNumber);
+  let guesses = 0;
+  let guessesLeft = 4;
+  let guessNumberAnswer = 0;
+  while ((guessNumberAnswer !== randomNumber) && guesses < guessesLeft) {
+    guessNumberAnswer = prompt(`I\'m thinking of a number between 1 and 10. Can you guess it? You have ${guessesLeft - guesses} guesses left.`);
+    console.log(`guessed the number: ${guessNumberAnswer}`);
+    console.log((guessNumberAnswer === randomNumber) && guesses < 4);
+    console.log(typeof guessNumberAnswer);
+    guesses++;
+    if ((parseInt(guessNumberAnswer) === randomNumber) && guessesLeft >= guesses) {
+      numberOfCorrectAnswers++;
+      alert(`You guessed it! I am thinking of the number ${randomNumber}. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+      break;
+    }
+    if ((parseInt(guessNumberAnswer) !== randomNumber) && guessesLeft === guesses){
+      alert(`Sorry! You're out of guesses! You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+    }
+  }
 
 //   // <------------------------- QUESTION 7 -------------------------> //
 
