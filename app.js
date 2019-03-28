@@ -17,6 +17,17 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   console.log(userName);
   console.log(guestName);
 
+  function playTheGame() {
+    askQuestionOne();
+    askQuestionTwo();
+    askQuestionThree();
+    askQuestionFour();
+    askQuestionFive();
+    askQuestionSix();
+    askQuestionSeven();
+    giveSummary();
+  }
+
   // <------------------------- QUESTION 1 -------------------------> //
   function askQuestionOne() {
     let morningPersonAnswer = prompt('Am I a morning person?').toLowerCase();
@@ -32,7 +43,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
     console.log(`Question 1: Answer: ${morningPersonAnswer}`);
   }
-  askQuestionOne();
 
   // <------------------------- QUESTION 2 -------------------------> //
   function askQuestionTwo() {
@@ -49,7 +59,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
     console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
   }
-  askQuestionTwo();
 
   // <------------------------- QUESTION 3 -------------------------> //
   function askQuestionThree() {
@@ -71,7 +80,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
     console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
   }
-  askQuestionThree();
 
   //   // <------------------------- QUESTION 4 -------------------------> //
   function askQuestionFour() {
@@ -88,7 +96,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
     console.log(`Question 4: Answer: ${tallerThanAnswer}`);
   }
-  askQuestionFour();
 
   // <------------------------- QUESTION 5 -------------------------> //
   function askQuestionFive() {
@@ -110,7 +117,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
     console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
   }
-  askQuestionFive();
 
   // <------------------------- QUESTION 6 -------------------------> //
   function askQuestionSix() {
@@ -156,7 +162,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
       }
     }
   }
-  askQuestionSix();
 
   // <------------------------- QUESTION 7 -------------------------> //
   function askQuestionSeven() {
@@ -196,7 +201,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
       console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
     }
   }
-  askQuestionSeven();
 
   function giveSummary() {
     if (numberOfCorrectAnswers < 3) {
@@ -213,5 +217,6 @@ document.getElementById('start-quiz').addEventListener('click', () => {
       );
     }
   }
-  giveSummary();
+
+  playTheGame();
 });
