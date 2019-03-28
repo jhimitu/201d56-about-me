@@ -71,15 +71,21 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   askQuestionThree();
 
   //   // <------------------------- QUESTION 4 -------------------------> //
-
-  //   let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
-  //   if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
-  //     numberOfCorrectAnswers++;
-  //     alert(`You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
-  //     alert(`Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   }
-  //   console.log(`Question 4: Answer: ${tallerThanAnswer}`);
+  function askQuestionFour() {
+    let tallerThanAnswer = prompt('Am I taller than 5\'3"?').toLowerCase();
+    if (tallerThanAnswer === 'no' || tallerThanAnswer === 'n') {
+      numberOfCorrectAnswers++;
+      alert(
+        `You\'re right. I\'m actually the shortest in my immediate family. And they remind me of this A LOT. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (tallerThanAnswer === 'yes' || tallerThanAnswer === 'y') {
+      alert(
+        `Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 4: Answer: ${tallerThanAnswer}`);
+  }
+  askQuestionFour();
 
   //   // <------------------------- QUESTION 5 -------------------------> //
 
