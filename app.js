@@ -47,16 +47,28 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
   }
   askQuestionTwo();
-  //   // <------------------------- QUESTION 3 -------------------------> //
 
-  //   let cheesyDanceMovieAnswer = prompt('Do I love cheesy dance movies?').toLowerCase();
-  //   if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
-  //     numberOfCorrectAnswers++;
-  //     alert(`You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   } else if (cheesyDanceMovieAnswer === 'no' || cheesyDanceMovieAnswer === 'n') {
-  //     alert(`Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
-  //   }
-  //   console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
+  // <------------------------- QUESTION 3 -------------------------> //
+  function askQuestionThree() {
+    let cheesyDanceMovieAnswer = prompt(
+      'Do I love cheesy dance movies?'
+    ).toLowerCase();
+    if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
+      numberOfCorrectAnswers++;
+      alert(
+        `You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    } else if (
+      cheesyDanceMovieAnswer === 'no' ||
+      cheesyDanceMovieAnswer === 'n'
+    ) {
+      alert(
+        `Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`
+      );
+    }
+    console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
+  }
+  askQuestionThree();
 
   //   // <------------------------- QUESTION 4 -------------------------> //
 
