@@ -20,25 +20,27 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   }
   console.log(`Question 1: Answer: ${morningPersonAnswer}`);
 
-//   // <------------------------- QUESTION 2 -------------------------> //
+  // <------------------------- QUESTION 2 -------------------------> //
 
-//   let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
-//   if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
-//     alert('Correct! I actually hate orange-flavored anything...unless it\'s an actual orange.');
-//   } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
-//     alert('Sorry, you guessed wrong.');
-//   }
-//   console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
+  let orangeSodaAnswer = prompt('Do I like orange soda?').toLowerCase();
+  if (orangeSodaAnswer === 'no' || orangeSodaAnswer === 'n') {
+    numberOfCorrectAnswers++;
+    alert(`Correct! I actually hate orange-flavored anything...unless it\'s an actual orange. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  } else if (orangeSodaAnswer === 'yes' || orangeSodaAnswer === 'y') {
+    alert(`Sorry, you guessed wrong. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  }
+  console.log(`Question 2: Answer: ${orangeSodaAnswer}`);
 
-//   // <------------------------- QUESTION 3 -------------------------> //
+  // <------------------------- QUESTION 3 -------------------------> //
 
-//   let cheesyDanceMovieAnswer = prompt('Do I love cheesy dance movies?').toLowerCase();
-//   if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
-//     alert('You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard');
-//   } else if (cheesyDanceMovieAnswer === 'no' || cheesyDanceMovieAnswer === 'n') {
-//     alert('Sorry, that\'s incorrect.');
-//   }
-//   console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
+  let cheesyDanceMovieAnswer = prompt('Do I love cheesy dance movies?').toLowerCase();
+  if (cheesyDanceMovieAnswer === 'yes' || cheesyDanceMovieAnswer === 'y') {
+    numberOfCorrectAnswers++;
+    alert(`You guessed it! Top faves include: You Got Served, Honey, and Stomp The Yard. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  } else if (cheesyDanceMovieAnswer === 'no' || cheesyDanceMovieAnswer === 'n') {
+    alert(`Sorry, that\'s incorrect. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
+  }
+  console.log(`Question 3: Answer: ${cheesyDanceMovieAnswer}`);
 
 //   // <------------------------- QUESTION 4 -------------------------> //
 
