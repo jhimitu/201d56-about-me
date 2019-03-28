@@ -24,6 +24,10 @@ main h2 {
   font-size: 3em;
   
 }
+h3 {
+  color: #4a5158;
+  font-family: 'Raleway', sans-serif;
+}
 p {
   color: #4a5158;
   font-family: 'Raleway', sans-serif;
@@ -64,6 +68,12 @@ main {
   color: #4a5158;
 }
 
+#job {
+  padding-right: 20em;
+  padding-left: 20em;
+}
+
+
 /******* QUIZ STYLES *******/
 
 #about-me-quiz {
@@ -82,6 +92,13 @@ main {
   border-color: #672455;
   box-shadow: 2px 4px 10px grey;
 }
+
+li, ol {
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  color: #4a5158;
+}
+
 
 /************ MEDIA QUERIES *************/
 
