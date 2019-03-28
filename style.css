@@ -1,8 +1,10 @@
 body {
   margin: 0;
   text-align: center;
+  /* font-family: 'Raleway', sans-serif; */
 }
 
+/******* HERO STYLES *******/
 header {
   background-color: #672455;
   color: white;
@@ -12,65 +14,33 @@ h1 {
   margin: 0;
   padding-top: 3em;
   font-size: 5em;
-  font-family: 'Raleway', sans-serif;
 }
 #down-arrow {
   padding-top: 20em;
 }
 
-main h2 {
-  color: #4a5158;
-  font-family: 'Raleway', sans-serif;
-  font-size: 3em;
-  
-}
-h3 {
-  color: #4a5158;
-  font-family: 'Raleway', sans-serif;
-}
-p {
-  color: #4a5158;
-  font-family: 'Raleway', sans-serif;
-}
+/******* MAIN STYLES *******/
+
 main {
   background: whitesmoke;
 }
 
+h2 {
+  font-size: 3em;
+}
+
+li, ol {
+  list-style: none;
+}
+
 /******* ABOUT STYLES *******/
 
-#about-bio {
-  width: 20em;
-}
-
-#container {
-  display: flex;
-  justify-content: center;
-  padding-top: 10em;
-}
-
-#about-profile, #about-bio {
-  padding-right: 2em;
-  padding-left: 2em;
-}
 #about-me {
   height: 100vh;
 }
-#short-bio {
-  padding-top: 1em;
-}
-#profile {
-  padding: 3em;
-  border-radius: 15em;
-}
-#github-link {
-  font-family: 'Raleway', sans-serif;
-  text-decoration: none;
-  color: #4a5158;
-}
 
-#job {
-  padding-right: 20em;
-  padding-left: 20em;
+#profile {
+  border-radius: 15em;
 }
 
 
@@ -78,9 +48,6 @@ main {
 
 #about-me-quiz {
   height: 100vh;
-}
-#guessing-game {
-  padding-top: 5em;
 }
 
 #start-quiz {
@@ -93,23 +60,9 @@ main {
   box-shadow: 2px 4px 10px grey;
 }
 
-li, ol {
-  list-style: none;
-  font-family: 'Raleway', sans-serif;
-  color: #4a5158;
-}
-
 
 /************ MEDIA QUERIES *************/
 
 @media screen and (max-width: 992px) {
-  #container {
-    flex-wrap: wrap;
-  }
-  #short-bio {
-    padding-top: 0;
-  }
-  #profile {
-    padding-top:  3em;
-  }
+
 }
