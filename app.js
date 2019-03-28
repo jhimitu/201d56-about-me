@@ -108,4 +108,12 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     }
     console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
   }
+  
+  if (numberOfCorrectAnswers < 3) {
+    alert(`You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Better luck next time!`);
+  } else if (numberOfCorrectAnswers > 3 && numberOfCorrectAnswers <= 5) {
+    alert(`You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Not bad.`);
+  } else if (numberOfCorrectAnswers > 5) {
+    alert(`High Score! You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}!`);
+  }
 });
