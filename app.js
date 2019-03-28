@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 'use strict';
 document.getElementById('start-quiz').addEventListener('click', () => {
 
@@ -64,8 +65,8 @@ document.getElementById('start-quiz').addEventListener('click', () => {
   }
   console.log(`Question 5: Answer: ${playsInstrumentAnswer}`);
 
-// <------------------------- QUESTION 6 -------------------------> //
-  
+  // <------------------------- QUESTION 6 -------------------------> //
+
   let min = Math.ceil(1);
   let max = Math.floor(10);
   let randomNumber = Math.floor(Math.random() * (max - min)) + min;
@@ -80,10 +81,10 @@ document.getElementById('start-quiz').addEventListener('click', () => {
     console.log(typeof guessNumberAnswer);
     guesses++;
     if (guessNumberAnswer > randomNumber) {
-        alert(`Too high! You have ${guessesLeft - guesses} guesses left.`)
-      }
+      alert(`Too high! You have ${guessesLeft - guesses} guesses left.`);
+    }
     if (guessNumberAnswer < randomNumber) {
-      alert(`Too low! You have ${guessesLeft - guesses} guesses left.`)
+      alert(`Too low! You have ${guessesLeft - guesses} guesses left.`);
     }
     if ((parseInt(guessNumberAnswer) === randomNumber) && guessesLeft >= guesses) {
       numberOfCorrectAnswers++;
@@ -110,11 +111,10 @@ document.getElementById('start-quiz').addEventListener('click', () => {
       break;
     }
     if ((stateLivedInAnswer !== states[0] || stateLivedInAnswer !== states[1]) && triesUsed === availableGuesses) {
-      alert(`Sorry. None of those are correct and you're out of guesses. I've lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`)
+      alert(`Sorry. None of those are correct and you're out of guesses. I've lived in North Carolina and Colorado. You\'ve answered ${numberOfCorrectAnswers} out of ${numberOfQuestions} questions correctly.`);
     }
     console.log(`try #${triesUsed} answer: ${stateLivedInAnswer}`);
   }
-  
   if (numberOfCorrectAnswers < 3) {
     alert(`You got ${numberOfCorrectAnswers} out of ${numberOfQuestions} correct, ${userName}. Better luck next time!`);
   } else if (numberOfCorrectAnswers > 3 && numberOfCorrectAnswers <= 5) {
