@@ -32,6 +32,8 @@ h2 {
 
 li, ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #main-container {
@@ -73,7 +75,10 @@ ol li {
   padding: 3em;
   border-radius: .5em;
   box-shadow: 2px 4px 10px grey;
+}
 
+#top-ten-list p {
+  width: 240px;
 }
 
 /******* ABOUT STYLES *******/
@@ -106,8 +111,14 @@ ol li {
   padding: 1em 2em;
   font-size: 1em;
   border-radius: .5em;
-  border-color: #672455;
+  border: none;
+  /* border-color: #672455; */
   box-shadow: 2px 4px 10px grey;
+  cursor: pointer;
+}
+
+#start-quiz:hover {
+  background-color: rgba(103, 36, 85, 0.8);
 }
 
 
